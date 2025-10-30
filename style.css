@@ -52,3 +52,8 @@ img {
   image-rendering: crisp-edges !important;
 }
 
+  @media screen and (min-width: 1620px) {
+   .hero-section{
+    height: 800px !important;
+   }
+  }
