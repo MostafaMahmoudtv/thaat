@@ -1,506 +1,9 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="assets/logo.png" />
-    <title>Thaat-ذات</title>
-    <link
-      href="https://fonts.cdnfonts.com/css/neo-sans-arabic"
-      rel="stylesheet"
-    />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="absolute top-0 left-0 w-full bg-transparent z-20 py-4">
-      <div class="container mx-auto flex justify-between items-center px-6">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <img src="assets/logo1.svg" alt="شعار ذات" class="h-16" />
-        </div>
-
-        <!-- Navigation + Buttons -->
-        <div class="flex items-center space-x-6 space-x-reverse text-white">
-          <nav
-            class="hidden text-lg font-normal md:flex items-center space-x-6 space-x-reverse"
-          >
-            <a href="#" class="hover:text-gray-300">الرئيسية</a>
-            <a href="#" class="hover:text-gray-300">الوظائف</a>
-            <a href="#" class="hover:text-gray-300">تواصل معنا</a>
-          </nav>
-
-          <div class="flex items-center space-x-2 space-x-reverse">
-            <button
-              class="bg-[#5090C7] w-32  text-white px-4 py-3 rounded-md transition"
-            >
-              حساب الباحثين
-            </button>
-            <button
-              class="bg-[#3f4595] w-32 text-white px-4 py-3 rounded-md hover:bg-[#5090C7] transition"
-            >
-              حساب الشركات
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section
-      class="relative min-h-screen flex items-end bg-cover bg-center text-white"
-      style="background-image: url('assets/firstSection.png')"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-l from-indigo-900/90 to-[#0F1C4D]/90"
-      ></div>
-
-      <div
-        class="relative container mx-auto flex flex-col md:flex-row items-center px-6 "
-      >
-        <div class="md:max-w-xl mb-10 md:mb-0 z-10">
-          <h1 class="text-4xl md:text-6xl leading-[60px] mb-4 pb-8">
-            وظف أفضل الكفاءات <br />
-            السعودية بسهولة
-          </h1>
-          <p class="text-lg text-gray-200 mt-6 ">
-            انضم إلى "ذات" وابدأ بتوظيف نخبة المواهب المحلية بمرونة وسهولة.
-          </p>
-          <p class="text-lg text-gray-200 mt-4 mb-6">
-            أنشئ حساب شركتك مجانًا، وانشر شواغرك خلال دقائق، وابدأ استقبال طلبات
-            المرشحين فورًا.
-          </p>
-          <button
-            class="bg-[#3f4595] w-80 text-white text-2xl px-6 py-3 mt-12 rounded-lg shadow-lg hover:bg-[#5090C7] transition mb-6"
-          >
-            سجل شركتك الآن مجانًا
-          </button>
-
-          <!-- مؤشرات السلايدر -->
-          <div class="flex items-center gap-3 pb-8">
-            <div
-              id="dot1"
-              class="h-1 w-32 bg-white/40 transition-all duration-500 cursor-pointer"
-            ></div>
-            <div
-              id="dot2"
-              class="h-1 w-32 bg-white transition-all duration-500 cursor-pointer"
-            ></div>
-          </div>
-        </div>
-
-        <!-- صورة السلايدر -->
-        <div class="md:w-1/2 absolute left-0 -bottom-32 z-10">
-          <div class="w-full h-auto relative">
-            <img
-              id="slider"
-              src="assets/ipad.png"
-              class="w-full h-full object-cover transition-all duration-700"
-              alt="عرض المنصة"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[#f7f9fc] py-20">
-      <div
-        class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 items-center text-center px-4"
-      >
-        <div class="space-y-4">
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/bag.svg"
-              alt="الباحثين عن عمل"
-              class="w-14 h-14 mb-3"
-            />
-            <h2 class="text-2xl font-semibold text-[#2c2d81]">
-              للباحثين عن عمل
-            </h2>
-          </div>
-
-          <div class="flex flex-col items-center space-y-2">
-            <p class="bg-[#d9e8fb] text-[#2c2d81] py-2 px-4 rounded-md w-[85%]">
-              التقديم مجاني بالكامل.
-            </p>
-            <p class="bg-[#d9e8fb] text-[#2c2d81] py-2 px-4 rounded-md w-[85%]">
-              عروض وظيفية تصلك مباشرة.
-            </p>
-            <p class="bg-[#d9e8fb] text-[#2c2d81] py-2 px-4 rounded-md w-[85%]">
-              ملف واحد لتقديم أسرع.
-            </p>
-            <p class="bg-[#d9e8fb] text-[#2c2d81] py-2 px-4 rounded-md w-[85%]">
-              تابع حالة طلباتك بسهولة.
-            </p>
-            <p class="bg-[#d9e8fb] text-[#2c2d81] py-2 px-4 rounded-md w-[85%]">
-              اكتشف أفضل الفرص بالسعودية.
-            </p>
-          </div>
-
-          <button
-            class="bg-[#3d8bdb] text-white font-medium px-6 py-2 rounded-md hover:bg-[#3276bd] transition"
-          >
-            سجل واستقبل الوظائف
-          </button>
-        </div>
-
-        <!-- الدائرة في المنتصف -->
-        <div class="flex justify-center items-center">
-          <div
-            class="w-52 h-52 flex flex-col justify-center items-center bg-white rounded-full shadow-md border border-gray-200"
-          >
-            <h2 class="text-4xl font-bold text-[#2c2d81]">ذات</h2>
-            <p class="text-gray-600 text-sm mt-1">للتوظيف الفوري</p>
-          </div>
-        </div>
-        <div class="space-y-4">
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/building.svg"
-              alt="أصحاب الشركات"
-              class="w-14 h-14 mb-3"
-            />
-            <h2 class="text-2xl font-semibold text-blue-900">لأصحاب الشركات</h2>
-          </div>
-
-          <div class="flex flex-col items-center space-y-2">
-            <p class="bg-[#e9eefb] text-blue-900 py-2 px-4 rounded-md w-[85%]">
-              انشر وظائفك الشاغرة مجانًا.
-            </p>
-            <p class="bg-[#e9eefb] text-blue-900 py-2 px-4 rounded-md w-[85%]">
-              وصول لأفضل الكفاءات بالمملكة.
-            </p>
-            <p class="bg-[#e9eefb] text-blue-900 py-2 px-4 rounded-md w-[85%]">
-              أدوات ذكية لفرز المرشحين.
-            </p>
-            <p class="bg-[#e9eefb] text-blue-900 py-2 px-4 rounded-md w-[85%]">
-              دعم شخصي ومباشر لتوظيفك.
-            </p>
-            <p class="bg-[#e9eefb] text-blue-900 py-2 px-4 rounded-md w-[85%]">
-              وظّف أسرع بدون أي رسوم.
-            </p>
-          </div>
-
-          <button
-            class="bg-[#2c2d81] text-white font-medium px-6 py-2 rounded-md hover:bg-[#22246d] transition"
-          >
-            سجل شركتك وانشر الوظائف
-          </button>
-        </div>
-        <!-- العمود الأيمن - الباحثين عن عمل -->
-      </div>
-    </section>
-    <section
-      class="relative bg-cover bg-center bg-no-repeat py-20"
-      style="background-image: url('assets/firstSection.png')"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-[#0a0b3b]/80 to-[#1b1464]/70 z-0"
-      ></div>
-
-      <!-- المحتوى -->
-      <div
-        class="relative z-10 container mx-auto grid md:grid-cols-2 items-center px-6 text-white"
-      >
-        <!-- العمود الأيمن: النص -->
-        <div class="text-right space-y-4">
-          <h2 class="text-4xl md:text-5xl font-semibold mb-4">لماذا ذات ؟</h2>
-          <p class="text-lg leading-relaxed">
-            نحن نجمع أفضل الكفاءات مع أفضل الشركات. لا نعتمد على كلمتنا فحسب، بل
-            استمع إلى ما يقوله أعضاء مجتمعنا.
-          </p>
-          <p class="text-lg leading-relaxed">
-            نحن نجمع أفضل الكفاءات مع أفضل الشركات. لا نعتمد على كلمتنا فحسب، بل
-            استمع إلى ما يقوله أعضاء مجتمعنا.
-          </p>
-          <p class="text-lg leading-relaxed">
-            نحن نجمع أفضل الكفاءات مع أفضل الشركات. لا نعتمد على كلمتنا فحسب، بل
-            استمع إلى ما يقوله أعضاء مجتمعنا.
-          </p>
-        </div>
-        <!-- العمود الأيسر: الصورة -->
-        <div class="flex justify-center md:justify-start mb-8 md:mb-0">
-          <img
-            src="assets/Image 55.png"
-            alt="Magic Hat"
-            class="w-[320px] h-auto object-contain drop-shadow-lg"
-          />
-        </div>
-      </div>
-    </section>
-    <section class="bg-[#f4f5fb] py-20">
-      <div
-        class="max-w-7xl mx-auto grid md:grid-cols-[0.7fr_1.3fr] gap-8 items-center px-6"
-      >
-        <!-- العمود الأيمن -->
-        <div class="text-right space-y-6">
-          <h2 class="text-4xl font-semibold text-[#2c2d81]">شهادات نعتز بها</h2>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            نحن نجمع أفضل الكفاءات مع أفضل الشركات. لا نعتمد على كلمتنا فحسب، بل
-            استمع إلى ما يقوله أعضاء مجتمعنا.
-          </p>
-          <button
-            class="border border-[#2c2d81] text-[#2c2d81] font-medium px-6 py-2 rounded-md hover:bg-[#2c2d81] hover:text-white transition flex items-center gap-2 justify-center md:justify-end"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 rotate-180"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-            <span>شاركنا تعليقاتك وتجربتك</span>
-          </button>
-        </div>
-        <!-- الشبكة اليسرى -->
-        <div class="grid sm:grid-cols-2 gap-8 text-right">
-          <!-- شهادة -->
-          <div class="bg-transparent space-y-3">
-            <p class="text-gray-700 leading-relaxed">
-              منصة استثنائية سهلت علينا توظيف كفاءات مميزة بسرعة قياسية وبشكل
-              مجاني تمامًا.
-            </p>
-            <div>
-              <h3 class="font-semibold text-[#2c2d81]">خالد عبدالعزيز</h3>
-              <p class="text-sm text-[#4d64b2]">
-                مدير شركة رقميات لتقنية المعلومات
-              </p>
-            </div>
-            <div class="flex justify-start">
-              <img
-                src="assets/main.jpg"
-                alt="user"
-                class="w-12 h-12 rounded-full object-contain border border-gray-300"
-              />
-            </div>
-          </div>
-
-          <!-- تكرارات -->
-          <div class="bg-transparent space-y-3">
-            <p class="text-gray-700 leading-relaxed">
-              منصة استثنائية سهلت علينا توظيف كفاءات مميزة بسرعة قياسية وبشكل
-              مجاني تمامًا.
-            </p>
-            <div>
-              <h3 class="font-semibold text-[#2c2d81]">خالد عبدالعزيز</h3>
-              <p class="text-sm text-[#4d64b2]">
-                مدير شركة رقميات لتقنية المعلومات
-              </p>
-            </div>
-            <div class="flex justify-start">
-              <img
-                src="assets/main.jpg"
-                alt="user"
-                class="w-12 h-12 rounded-full border border-gray-300 object-contain"
-              />
-            </div>
-          </div>
-
-          <div class="bg-transparent space-y-3">
-            <p class="text-gray-700 leading-relaxed">
-              منصة استثنائية سهلت علينا توظيف كفاءات مميزة بسرعة قياسية وبشكل
-              مجاني تمامًا.
-            </p>
-            <div>
-              <h3 class="font-semibold text-[#2c2d81]">خالد عبدالعزيز</h3>
-              <p class="text-sm text-[#4d64b2]">
-                مدير شركة رقميات لتقنية المعلومات
-              </p>
-            </div>
-            <div class="flex justify-start">
-              <img
-                src="assets/main.jpg"
-                alt="user"
-                class="w-12 h-12 rounded-full border border-gray-300 object-contain"
-              />
-            </div>
-          </div>
-
-          <div class="bg-transparent space-y-3">
-            <p class="text-gray-700 leading-relaxed">
-              منصة استثنائية سهلت علينا توظيف كفاءات مميزة بسرعة قياسية وبشكل
-              مجاني تمامًا.
-            </p>
-            <div>
-              <h3 class="font-semibold text-[#2c2d81]">خالد عبدالعزيز</h3>
-              <p class="text-sm text-[#4d64b2]">
-                مدير شركة رقميات لتقنية المعلومات
-              </p>
-            </div>
-            <div class="flex justify-start">
-              <img
-                src="assets/main.jpg"
-                alt="user"
-                class="w-12 h-12 rounded-full border border-gray-300 object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-[#E9EBF2] py-12">
-      <div class="container mx-auto">
-        <div class="flex flex-wrap justify-center items-center gap-16 px-6">
-          <img
-            src="/assets/Image50.png"
-            alt="dozan"
-            class="h-12 grayscale invert-0"
-          />
-
-          <img
-            src="/assets/Image 51.png"
-            alt="UBRAND"
-            class="h-12 grayscale invert-0"
-          />
-
-          <img
-            src="/assets/Image 52.png"
-            alt="ABYATONA"
-            class="h-12 grayscale invert"
-          />
-
-          <img
-            src="/assets/Image 53.png"
-            alt="dnet"
-            class="h-12 grayscale invert-0"
-          />
-
-          <img
-            src="/assets/Image 54.png"
-            alt="SAP"
-            class="h-12 grayscale invert"
-          />
-
-          <img
-            src="/assets/Group 9129.png"
-            alt="MAFAZ"
-            class="h-12 grayscale invert-0"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="relative bg-cover bg-center bg-no-repeat py-20 text-center text-white"
-      style="background-image: url('/assets/firstSection.png')"
-    >
-      <div class="absolute inset-0 bg-[#001A66]/70"></div>
-      <!-- طبقة شفافة فوق الصورة -->
-
-      <div
-        class="relative container mx-auto flex flex-col md:flex-row justify-center items-center gap-16"
-      >
-        <div>
-          <h3 class="text-4xl md:text-5xl font-semibold text-[#4BB3F9]">
-            15,640
-          </h3>
-          <p class="text-white text-lg mt-2">باحث عن عمل</p>
-        </div>
-
-        <div>
-          <h3 class="text-4xl md:text-5xl font-semibold text-[#4BB3F9]">564</h3>
-          <p class="text-white text-lg mt-2">جهة توظيف</p>
-        </div>
-
-        <div>
-          <h3 class="text-4xl md:text-5xl font-semibold text-[#4BB3F9]">
-            1,260
-          </h3>
-          <p class="text-white text-lg mt-2">تم توظيفهم</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="text-center py-8 border-t border-gray-100">
-      <div class="flex flex-col items-center space-y-6">
-        <!-- Links -->
-        <div class="flex flex-wrap justify-center gap-6 text-sm font-medium">
-          <a href="#" class="hover:text-indigo-700">الوظائف</a>
-          <a href="#" class="hover:text-indigo-700">عن ذات</a>
-          <a href="#" class="hover:text-indigo-700">حسابي</a>
-          <a href="#" class="hover:text-indigo-700">الأسئلة الشائعة</a>
-          <a href="#" class="hover:text-indigo-700">الشروط والأحكام</a>
-          <a href="#" class="hover:text-indigo-700">تواصل معنا</a>
-        </div>
-
-        <!-- Social Icons -->
-        <div
-          class="flex justify-center space-x-5 space-x-reverse text-2xl text-[#3c3f87]"
-        >
-          <a href="#"><i class="fab fa-snapchat"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-
-        <!-- Copyright -->
-        <div class="text-gray-500 text-sm">
-          جميع الحقوق محفوظة لـ ذات © 2025 <br />
-          <a href="https://www.thaat.net" class="text-[#3c3f87] hover:underline"
-            >www.thaat.net</a
-          >
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      const slides = ["assets/ipad.png", "assets/ipad2.png"];
-      const slider = document.getElementById("slider");
-      const dot1 = document.getElementById("dot1");
-      const dot2 = document.getElementById("dot2");
-
-      let current = 0;
-
-      function updateSlider() {
-        slider.src = slides[current];
-        if (current === 0) {
-          dot1.classList.add("bg-white");
-          dot1.classList.remove("bg-white/40");
-          dot2.classList.add("bg-white/40");
-          dot2.classList.remove("bg-white");
-        } else {
-          dot2.classList.add("bg-white");
-          dot2.classList.remove("bg-white/40");
-          dot1.classList.add("bg-white/40");
-          dot1.classList.remove("bg-white");
-        }
-      }
-
-      // التبديل التلقائي
-
-      // التبديل اليدوي
-      dot1.addEventListener("click", () => {
-        current = 0;
-        updateSlider();
-      });
-      dot2.addEventListener("click", () => {
-        current = 1;
-        updateSlider();
-      });
-
-      updateSlider();
-    </script>
-  </body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="ar">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="assets/logo.png" />
-    <title>Thaat-ذات</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -510,7 +13,8 @@
       href="https://fonts.cdnfonts.com/css/neo-sans-arabic"
       rel="stylesheet"
     />
-
+    <link rel="icon" type="image/png" href="assets/logo.png"/>
+    <title>Thaat-ذات</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -914,7 +418,7 @@
     </section>
     <section class="bg-[#e7e8ef] py-12">
       <div class="container mx-auto">
-        <div class="flex  justify-center items-center gap-8 px-6">
+        <div class="flex justify-center items-center gap-8 px-6">
           <img
             src="/assets/Image 54.png"
             alt="SAP"
@@ -925,12 +429,12 @@
             alt="dnet"
             class="h-18 grayscale invert-0"
           />
-           <img
+          <img
             src="/assets/Group 9129.png"
             alt="MAFAZ"
             class="h-12 grayscale invert-0"
           />
-           <img
+          <img
             src="/assets/Image 52.png"
             alt="ABYATONA"
             class="h-12 grayscale invert"
@@ -945,9 +449,6 @@
             alt="dozan"
             class="h-20 grayscale invert-0 ml-12"
           />
-
-
-         
         </div>
       </div>
     </section>
@@ -977,7 +478,7 @@
     </section>
 
     <footer
-      class="flex justify-between items-start max-w-5xl mx-auto py-8 border-t border-gray-100 text-center"
+      class="flex justify-start items-start container  mx-auto py-8 border-t border-gray-100 text-center"
     >
       <!-- الصورة -->
       <div class="w-[30%] flex justify-center">
@@ -985,7 +486,7 @@
       </div>
 
       <!-- المحتوى -->
-      <div class="w-[70%] flex flex-col items-center space-y-6">
+      <div class="w-[60%] flex flex-col items-center space-y-6">
         <!-- الروابط -->
         <div
           class="flex flex-wrap w-[100%] text-[#555aa1] font-medium justify-between gap-6 text-lg"
@@ -1024,43 +525,6 @@
       </div>
     </footer>
 
-    <script>
-      const slides = ["assets/ipad.png", "assets/ipad2.png"];
-      const slider = document.getElementById("slider");
-      const dot1 = document.getElementById("dot1");
-      const dot2 = document.getElementById("dot2");
-
-      let current = 0;
-
-      function updateSlider() {
-        slider.src = slides[current];
-        if (current === 0) {
-          dot1.classList.add("bg-white");
-          dot1.classList.remove("bg-white/40");
-          dot2.classList.add("bg-white/40");
-          dot2.classList.remove("bg-white");
-        } else {
-          dot2.classList.add("bg-white");
-          dot2.classList.remove("bg-white/40");
-          dot1.classList.add("bg-white/40");
-          dot1.classList.remove("bg-white");
-        }
-      }
-
-      // التبديل التلقائي
-
-      // التبديل اليدوي
-      dot1.addEventListener("click", () => {
-        current = 0;
-        updateSlider();
-      });
-      dot2.addEventListener("click", () => {
-        current = 1;
-        updateSlider();
-      });
-
-      updateSlider();
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
->>>>>>> 584292b (new)

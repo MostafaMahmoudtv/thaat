@@ -1,54 +1,3 @@
-<<<<<<< HEAD
-:root {
-
-/* Colors: */
---unnamed-color-5090c7: #5090C7;
---unnamed-color-1fbbb3: #1FBBB3;
-
-/* Font/text values */
-  --unnamed-font-family-neo-sans-w23: 'Neo Sans Arabic', sans-serif;
---unnamed-font-style-normal: normal;
---unnamed-font-weight-medium: medium;
---unnamed-font-size-31: 31px;
---unnamed-character-spacing-0: 0px;
---unnamed-line-spacing-37: 37px;
-}
-
-/* Character Styles */
-.unnamed-character-style-1 {
-font-family: var(--unnamed-font-family-neo-sans-w23);
-font-style: var(--unnamed-font-style-normal);
-font-weight: var(--unnamed-font-weight-medium);
-font-size: var(--unnamed-font-size-31);
-line-height: var(--unnamed-line-spacing-37);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-1fbbb3);
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-  overflow-x: hidden;
-}
-
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  direction: rtl;
-  overflow-x: hidden;
-font-family:var(--unnamed-font-family-neo-sans-w23);
-  font-size: 12px;
-}
-
-.contianer {
-  max-width: 1569px;
-  margin: auto;
-}
-=======
 :root {
 
 /* Colors: */
@@ -103,4 +52,3 @@ img {
   image-rendering: crisp-edges !important;
 }
 
->>>>>>> 584292b (new)
