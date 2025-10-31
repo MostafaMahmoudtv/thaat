@@ -141,3 +141,132 @@ button:focus {
   .logo-slider:hover .slide-track {
     animation-play-state: paused;
   }
+  /* التابلت: شاشات بعرض أقل من 1024px */
+
+
+/* تباعد داخلي للفورم على شاشات أصغر */
+@media (max-width: 1024px) {
+  #formContainer form {
+    width: 75% !important;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+/* تابلت / موبايل كبير */
+@media (max-width: 768px) {
+  #formContainer form {
+    width: 90% !important;
+  }
+
+  /* اجعل النصوص والأزرار أكبر قليلاً للقراءة بالهاتف */
+  #formContainer form input,
+  #formContainer form button,
+  #formContainer form a > button {
+    font-size: 17px;
+    padding: 12px 10px;
+  }
+
+  /* زر "هل نسيت كلمة السر؟" نصه يكون في اليمين (لـ RTL) */
+  #formContainer .text-left {
+    text-align: right; /* لأن الفورم RTL */
+  }
+}
+
+/* شاشات صغيرة جدًا (مثل الهواتف القديمة) */
+@media (max-width: 420px) {
+  #formContainer form {
+    width: 96% !important;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  /* امنع أي ازاحة عرضية */
+ 
+  /* خفّض هوامش العنوان لو لازمة */
+  #formContainer h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* اجعل الأزرار أعلى لتسهيل الضغط بالإبهام */
+  #loginBtn {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 16px;
+  }
+}
+/* 🌐 القاعدة العامة للفورم */
+#jobForm,
+#companyForm {
+  width: 60% !important;
+  margin: auto;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+/* ✅ على الشاشات المتوسطة (تابلت وأجهزة متوسطة العرض) */
+@media (max-width: 1024px) {
+  #jobForm,
+  #companyForm {
+    width: 75% !important;
+  }
+
+}
+
+
+/* ✅ على الشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+  #jobForm,
+  #companyForm {
+    width: 90% !important;
+  }
+
+  /* تكبير حجم الخطوط والحقول لتناسب الموبايل */
+  #jobForm input,
+  #companyForm input,
+  #jobForm button,
+  #companyForm button {
+    font-size: 16px;
+    padding: 12px 10px;
+  }
+
+  /* المسافات بين العناصر */
+  #jobForm .space-y-4 > * + *,
+  #companyForm .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+
+  /* النصوص الصغيرة تكون في المنتصف للموبايل */
+  #formContainerRegister a {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ✅ على الشاشات الصغيرة جدًا (هواتف أقل من 420px) */
+@media (max-width: 420px) {
+  #jobForm,
+  #companyForm {
+    width: 96% !important;
+    padding: 0 8px;
+  }
+
+  /* تحسين حجم العناوين */
+  #registerTitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* تقليل المسافات لتناسب الشاشة */
+  #formContainerRegister {
+    padding: 16px 10px;
+  }
+
+  /* جعل الأزرار أكبر قليلاً لسهولة اللمس */
+  #jobForm button,
+  #companyForm button {
+    padding: 14px 10px;
+    font-size: 15px;
+  }
+}
