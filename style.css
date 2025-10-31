@@ -95,10 +95,12 @@ button:focus {
 
   /* وسّط النصوص */
   section.bg-\[\#f7f9fc\] p {
-    width: 90% !important;
+    width: 100% !important;
     margin: 0 auto !important;
-    text-align: center !important;
+    text-align: right !important;
     margin-top: 3px !important;
+    padding-right: 1rem;
+    padding-left: 1rem ;
   }
 
   /* الأزرار */
@@ -116,33 +118,32 @@ button:focus {
     transform: none !important;
   }
 }
- .logo-slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
+.logo-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 
-  .slide-track {
-    animation: scroll 25s linear infinite;
-    display: flex;
-    white-space: nowrap;
-  }
+.slide-track {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  white-space: nowrap;
+}
 
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-
-  /* توقف عند الـ hover */
-  .logo-slider:hover .slide-track {
-    animation-play-state: paused;
+  to {
+    transform: translateX(-100%);
   }
-  /* التابلت: شاشات بعرض أقل من 1024px */
+}
 
+/* توقف عند الـ hover */
+.logo-slider:hover .slide-track {
+  animation-play-state: paused;
+}
+/* التابلت: شاشات بعرض أقل من 1024px */
 
 /* تباعد داخلي للفورم على شاشات أصغر */
 @media (max-width: 1024px) {
@@ -182,7 +183,7 @@ button:focus {
   }
 
   /* امنع أي ازاحة عرضية */
- 
+
   /* خفّض هوامش العنوان لو لازمة */
   #formContainer h2 {
     font-size: 1.05rem;
@@ -211,9 +212,7 @@ button:focus {
   #companyForm {
     width: 75% !important;
   }
-
 }
-
 
 /* ✅ على الشاشات الصغيرة (الموبايل) */
 @media (max-width: 768px) {
@@ -270,3 +269,33 @@ button:focus {
     font-size: 15px;
   }
 }
+ @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .show {
+    animation: fadeSlideUp 1.2s ease forwards;
+  }
+
+  .fade-delay-1 {
+    animation-delay: 0.1s;
+  }
+  .fade-delay-2 {
+    animation-delay: 0.2s;
+  }
+  .fade-delay-3 {
+    animation-delay: 0.3s;
+  }

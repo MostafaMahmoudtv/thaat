@@ -177,3 +177,52 @@ const menuBtn = document.getElementById("menuBtn");
       mobileMenu.classList.add("hidden");
     });
   });
+   function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    const counter = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        start = target;
+        clearInterval(counter);
+      }
+      element.textContent = Math.floor(start).toLocaleString();
+    }, 16);
+  }
+
+  // تحديد السيكشن بكلاس stats-section
+  const section = document.querySelector(".stats-section");
+  const counters = section.querySelectorAll("h3");
+  let started = false;
+
+  window.addEventListener("scroll", () => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // يبدأ العد أول ما السكشن يظهر في الشاشة
+    if (!started && sectionTop < windowHeight - 100) {
+      started = true;
+
+      counters.forEach((counter) => {
+        const target = parseInt(counter.textContent.replace(/,/g, ""));
+        counter.textContent = "0";
+        animateCounter(counter, target);
+      });
+    }
+  });
+    const fadeElements = document.querySelectorAll('.fade-slide-up');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          // عشان ما يعيد الأنيميشن كل مرة
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 } // يعني يبدأ لما 20% من العنصر تكون ظاهرة
+  );
+
+  fadeElements.forEach((el) => observer.observe(el));
