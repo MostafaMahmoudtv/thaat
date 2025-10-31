@@ -1,27 +1,26 @@
 :root {
+  /* Colors: */
+  --unnamed-color-5090c7: #5090c7;
+  --unnamed-color-1fbbb3: #1fbbb3;
 
-/* Colors: */
---unnamed-color-5090c7: #5090C7;
---unnamed-color-1fbbb3: #1FBBB3;
-
-/* Font/text values */
-  --unnamed-font-family-neo-sans-w23: 'Neo Sans Arabic', sans-serif  !important;
---unnamed-font-style-normal: normal;
---unnamed-font-weight-medium: medium;
---unnamed-font-size-31: 31px;
---unnamed-character-spacing-0: 0px;
---unnamed-line-spacing-37: 37px;
+  /* Font/text values */
+  --unnamed-font-family-neo-sans-w23: "Neo Sans Arabic", sans-serif !important;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-medium: medium;
+  --unnamed-font-size-31: 31px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-37: 37px;
 }
 
 /* Character Styles */
 .unnamed-character-style-1 {
-font-family: var(--unnamed-font-family-neo-sans-w23) !important;
-font-style: var(--unnamed-font-style-normal);
-font-weight: var(--unnamed-font-weight-medium);
-font-size: var(--unnamed-font-size-31);
-line-height: var(--unnamed-line-spacing-37);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-1fbbb3);
+  font-family: var(--unnamed-font-family-neo-sans-w23) !important;
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-medium);
+  font-size: var(--unnamed-font-size-31);
+  line-height: var(--unnamed-line-spacing-37);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-1fbbb3);
 }
 
 html,
@@ -39,7 +38,7 @@ body {
   padding: 0;
   direction: rtl;
   overflow-x: hidden;
-font-family:var(--unnamed-font-family-neo-sans-w23) !important;
+  font-family: var(--unnamed-font-family-neo-sans-w23) !important;
   font-size: 12px;
 }
 
@@ -52,8 +51,93 @@ img {
   image-rendering: crisp-edges !important;
 }
 
-  @media screen and (min-width: 1620px) {
-   .hero-section{
+@media screen and (min-width: 1620px) {
+  .hero-section {
     height: 800px !important;
-   }
+  }
+}
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* للموبايل والتابلت فقط */
+@media (max-width: 1024px) {
+  section.bg-\[\#f7f9fc\] {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+  }
+
+  /* خليه عمود واحد بدل صف */
+  section.bg-\[\#f7f9fc\] > div {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* عدل حجم الدائرة */
+  section.bg-\[\#f7f9fc\] .w-96,
+  section.bg-\[\#f7f9fc\] .md\:w-\[23rem\] {
+    width: 15rem !important;
+    height: 15rem !important;
+    margin: 2rem 0 !important;
+  }
+
+  /* خليه العناصر تاخد عرض كامل */
+  section.bg-\[\#f7f9fc\] .w-2\/3 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* خفف المارجن */
+  section.bg-\[\#f7f9fc\] .mr-40,
+  section.bg-\[\#f7f9fc\] .ml-40 {
+    margin: 0 !important;
+  }
+
+  /* وسّط النصوص */
+  section.bg-\[\#f7f9fc\] p {
+    width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    margin-top: 3px !important;
+  }
+
+  /* الأزرار */
+  section.bg-\[\#f7f9fc\] button {
+    margin: 2rem auto 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /* شيل الـposition من الدائرة */
+  section.bg-\[\#f7f9fc\] > div > .absolute {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+}
+ .logo-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slide-track {
+    animation: scroll 25s linear infinite;
+    display: flex;
+    white-space: nowrap;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* توقف عند الـ hover */
+  .logo-slider:hover .slide-track {
+    animation-play-state: paused;
   }

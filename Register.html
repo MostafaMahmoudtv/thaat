@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.cdnfonts.com/css/neo-sans-arabic"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <title>Thaat-ذات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col items-center justify-center">
+    <header
+      class="absolute top-0 left-0 border-b border-white/10 w-full bg-transparent z-20 py-4"
+    >
+      <div class="container mx-auto flex justify-between items-center px-6">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <a href="index.html">
+            <img src="assets/logo1.svg" alt="شعار ذات" class="h-16" />
+          </a>
+        </div>
+
+        <!-- 🌐 Desktop Navigation -->
+        <div
+          class="hidden md:flex items-center space-x-6 space-x-reverse text-white"
+        >
+          <nav
+            class="text-lg font-normal flex items-center space-x-6 space-x-reverse"
+          >
+            <a href="#" class="hover:text-blue-100">الرئيسية</a>
+            <a href="#" class="hover:text-blue-100">الوظائف</a>
+            <a href="#" class="hover:text-blue-100">تواصل معنا</a>
+          </nav>
+
+          <div class="flex items-center space-x-2 space-x-reverse">
+            <a href="Login.html">
+              <button
+                class="bg-[#5090C7] hover:bg-[#63a4d4] w-32 text-white px-4 py-3 rounded-md transition"
+              >
+                حساب الباحثين
+              </button>
+            </a>
+            <a href="Login.html#companyTab">
+              <button
+                class="bg-[#3f4595] w-32 text-white px-4 py-3 rounded-md hover:bg-[#5090C7] transition outline-none focus:outline-none"
+              >
+                حساب الشركات
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- 📱 Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-white text-3xl focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- 📱 Mobile Menu Drawer -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-[#1b1d2f]/95 backdrop-blur-md absolute top-full left-0 w-full text-white flex flex-col items-center space-y-4 py-12 transition-all duration-300"
+      >
+        <a href="#" class="hover:text-blue-300 text-lg">الرئيسية</a>
+        <a href="#" class="hover:text-blue-300 text-lg">الوظائف</a>
+        <a href="#" class="hover:text-blue-300 text-lg">تواصل معنا</a>
+
+        <a href="Login.html" class="w-10/12">
+          <button
+            class="w-full bg-[#5090C7] hover:bg-[#63a4d4] text-white px-4 py-3 rounded-md transition"
+          >
+            حساب الباحثين
+          </button>
+        </a>
+
+        <a href="Login.html#companyTab" class="w-10/12">
+          <button
+            class="w-full bg-[#3f4595] hover:bg-[#5090C7] text-white px-4 py-3 rounded-md transition"
+          >
+            حساب الشركات
+          </button>
+        </a>
+      </div>
+    </header>
+    <!-- التبويبات -->
+    <div
+      class="w-[100%] flex justify-center py-32 pt-40"
+      style="
+        background-image: url('assets/firstSection.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <div
+        class="bg-transparent rounded-lg shadow-lg w-full max-w-xl overflow-hidden"
+      >
+        <div class="flex bg-transparent rounded-t-lg w-[90%] mx-auto">
+          <button
+            id="jobSeekerTabRegister"
+            class="w-1/2 py-3 !bg-white ml-6 inline-flex items-center justify-center text-center rounded-t-lg text-blue-600 transition duration-200"
+          >
+            <img src="assets/bag.svg" class="w-6 mx-2" alt="bag" />
+            حساب الباحثين عن عمل
+          </button>
+          <button
+            id="companyTabRegister"
+            class="w-1/2 py-3 inline-flex items-center justify-center rounded-t-lg bg-gray-300 text-gray-600 font-medium transition duration-200"
+          >
+            <img src="assets/building.svg" class="w-6 mx-2" alt="building" />
+            حساب الشركات
+          </button>
+        </div>
+
+        <!-- الفورم -->
+        <div
+          id="formContainerRegister"
+          class="p-6 rounded-lg shadow-lg bg-white"
+        >
+          <h2 id="registerTitle" class="text-center text-blue-600 text-xl mb-6">
+            تسجيل حساب باحث عن عمل
+          </h2>
+
+          <!-- ✅ فورم الباحثين عن عمل -->
+          <form id="jobForm" class="space-y-4 w-[60%] mx-auto pb-4">
+            <div>
+              <label class="block text-blue-600 mb-1">الاسم الكامل</label>
+              <input
+                type="text"
+                placeholder="مثال / أحمد محمد علي"
+                class="w-full border border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-200"
+              />
+            </div>
+
+            <div>
+              <label class="block text-blue-600 mb-1">البريد الإلكتروني</label>
+              <input
+                type="email"
+                placeholder="YourEmail@domain.sa"
+                class="w-full border border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-200"
+              />
+            </div>
+
+            <div>
+              <label class="block text-blue-600 mb-1">رقم الجوال</label>
+              <input
+                type="tel"
+                placeholder="+966501234567"
+                class="w-full border border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-200"
+              />
+            </div>
+
+            <div>
+              <label class="block text-blue-600 mb-1">كلمة المرور</label>
+              <input
+                type="password"
+                placeholder="************"
+                class="w-full border border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-200"
+              />
+            </div>
+
+            <div>
+              <label class="block text-blue-600 mb-1">تأكيد كلمة المرور</label>
+              <input
+                type="password"
+                placeholder="************"
+                class="w-full border border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-200"
+              />
+            </div>
+
+            <div class="flex items-center space-x-2 space-x-reverse">
+              <input type="checkbox" class="accent-blue-600" />
+              <label class="text-blue-600 text-sm"
+                >موافقة الشروط والأحكام</label
+              >
+            </div>
+
+            <button
+              id="registerBtn"
+              type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 text-base rounded transition duration-200"
+            >
+              تسجيل
+            </button>
+
+            <a
+              href="login.html"
+              class="block text-center text-blue-600 hover:underline text-sm"
+            >
+              عودة لصفحة الدخول
+            </a>
+          </form>
+
+          <!-- ✅ فورم الشركات -->
+          <form id="companyForm" class="space-y-4 w-[60%] mx-auto pb-4 hidden">
+            <div>
+              <label class="block text-[#3F4595] mb-1">اسم الشركة</label>
+              <input
+                type="text"
+                placeholder="مثال / شركة النخبة العربية"
+                class="w-full border border-[#3F459580] rounded px-3 py-2 focus:outline-none focus:ring focus:ring-[#3F459520]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[#3F4595] mb-1">رقم السجل التجاري</label>
+              <input
+                type="text"
+                placeholder="700124564"
+                class="w-full border border-[#3F459580] rounded px-3 py-2 focus:outline-none focus:ring focus:ring-[#3F459520]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[#3F4595] mb-1">البريد الإلكتروني</label>
+              <input
+                type="email"
+                placeholder="YourEmail@domain.sa"
+                class="w-full border border-[#3F459580] rounded px-3 py-2 focus:outline-none focus:ring focus:ring-[#3F459520]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[#3F4595] mb-1">رقم الجوال</label>
+              <input
+                type="tel"
+                placeholder="+966501234567"
+                class="w-full border border-[#3F459580] rounded px-3 py-2 focus:outline-none focus:ring focus:ring-[#3F459520]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[#3F4595] mb-1">كلمة المرور</label>
+              <input
+                type="password"
+                placeholder="************"
+                class="w-full border border-[#3F459580] rounded px-3 py-2 focus:outline-none focus:ring focus:ring-[#3F459520]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[#3F4595] mb-1">تأكيد كلمة المرور</label>
+              <input
+                type="password"
+                placeholder="************"
+                class="w-full border border-[#3F459580] rounded px-3 py-2 focus:outline-none focus:ring focus:ring-[#3F459520]"
+              />
+            </div>
+
+            <div class="flex items-center space-x-2 space-x-reverse">
+              <input type="checkbox" class="accent-[#3F4595]" />
+              <label class="text-[#3F4595] text-sm"
+                >موافقة الشروط والأحكام</label
+              >
+            </div>
+
+            <button
+              id="companyRegisterBtn"
+              type="submit"
+              class="w-full bg-[#3F4595] hover:bg-[#4e56c5] text-white py-2 text-base rounded transition duration-200"
+            >
+              تسجيل
+            </button>
+
+            <a
+              href="login.html"
+              class="block text-center text-[#3F4595] hover:underline text-sm"
+            >
+              عودة لصفحة الدخول
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="flex flex-col md:flex-row justify-start items-center md:items-start container mx-auto py-8 border-t border-gray-100 text-center gap-10 px-6"
+    >
+      <!-- الصورة -->
+      <div class="w-full md:w-[30%] flex justify-center md:justify-start">
+        <img
+          src="assets/logo.svg"
+          alt="thaat"
+          class="h-20 md:h-24 object-contain"
+        />
+      </div>
+
+      <!-- المحتوى -->
+      <div class="w-full md:w-[60%] flex flex-col items-center space-y-6">
+        <!-- الروابط -->
+        <div
+          class="flex flex-wrap justify-center md:justify-between w-full text-[#555aa1] font-medium gap-4 sm:gap-6 text-base sm:text-lg"
+        >
+          <a href="#" class="hover:text-indigo-700">الوظائف</a>
+          <a href="#" class="hover:text-indigo-700">عن ذات</a>
+          <a href="#" class="hover:text-indigo-700">حسابي</a>
+          <a href="#" class="hover:text-indigo-700">الأسئلة الشائعة</a>
+          <a href="#" class="hover:text-indigo-700">الشروط والأحكام</a>
+          <a href="#" class="hover:text-indigo-700">تواصل معنا</a>
+        </div>
+
+        <!-- السوشيال -->
+        <div
+          class="flex flex-row-reverse justify-center md:justify-end gap-5 text-xl sm:text-2xl text-[#3c3f87]"
+        >
+          <a href="#"><i class="fab fa-snapchat"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <!-- الحقوق -->
+        <div class="text-gray-500 text-sm leading-relaxed">
+          جميع الحقوق محفوظة لـ ذات © 2025 <br />
+          <a
+            href="https://www.thaat.net"
+            class="text-[#3c3f87] hover:underline"
+          >
+            www.thaat.net
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Register.js"></script>
+  </body>
+</html>
