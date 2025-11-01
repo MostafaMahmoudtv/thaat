@@ -110,7 +110,7 @@
       <div
         class="relative container mx-auto flex flex-col md:flex-row items-center px-6 pt-24 md:pt-0 text-center md:text-right"
       >
-        <!-- الصورة (تظهر أولًا على الشاشات الصغيرة فقط) -->
+        <!-- الصورة -->
         <div
           class="relative order-1 md:order-2 mt-6 w-full md:w-1/2 flex justify-center md:justify-end z-10 md:absolute md:left-0 md:-bottom-32"
         >
@@ -122,23 +122,9 @@
           />
         </div>
 
-        <!-- مؤشرات السلايدر (تحت الصورة في الموبايل فقط) -->
-        <div
-          class="order-2 md:hidden flex justify-center items-center gap-3 pt-4 pb-6"
-        >
-          <div
-            id="dot1"
-            class="h-1 w-20 sm:w-28 bg-white/40 transition-all duration-500 cursor-pointer"
-          ></div>
-          <div
-            id="dot2"
-            class="h-1 w-20 sm:w-28 bg-white transition-all duration-500 cursor-pointer"
-          ></div>
-        </div>
-
         <!-- النص -->
         <div
-          class="order-3 md:order-1 md:max-w-xl mt-10 md:mt-20 mb-10 md:mb-0 z-10 flex-1"
+          class="order-2 md:order-1 md:max-w-xl mt-10 md:mt-20 mb-10 md:mb-0 z-10 flex-1"
         >
           <h1
             class="text-3xl sm:text-4xl md:text-5xl !leading-snug md:!leading-[70px] mb-4 pb-2 fade-slide-up fade-delay-1"
@@ -167,9 +153,9 @@
             </button>
           </a>
 
-          <!-- مؤشرات السلايدر (تظهر فقط على الشاشات الكبيرة) -->
+          <!-- مؤشرات السلايدر (موحدة لكل الشاشات) -->
           <div
-            class="hidden md:flex justify-start items-center gap-3 pt-4 pb-10"
+            class="flex justify-center md:justify-start items-center gap-3 pt-4 pb-6"
           >
             <div
               id="dot1"
@@ -399,7 +385,7 @@
           </p>
 
           <button
-            class="border border-[#2c2d81]  text-lg sm:text-xl text-[#2c2d81] px-3 py-4 rounded-md hover:bg-[#2c2d81] mx-auto md:mx-0 hover:text-white transition flex items-center gap-2 justify-center md:justify-end mt-10 md:mt-16 fade-slide-up fade-delay-3"
+            class="border border-[#2c2d81] text-lg sm:text-xl text-[#2c2d81] px-3 py-4 rounded-md hover:bg-[#2c2d81] mx-auto md:mx-0 hover:text-white transition flex items-center gap-2 justify-center md:justify-end mt-10 md:mt-16 fade-slide-up fade-delay-3"
           >
             <span class="ml-8 sm:ml-12">شاركنا تعليقاتك وتجربتك</span>
             <svg
