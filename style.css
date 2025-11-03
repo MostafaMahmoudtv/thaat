@@ -494,7 +494,7 @@ button:focus {
    }
 
   /* صورة المستخدم */
-  section.bg-\[\#e7e8ef\] img {
+  .shahada .bg-\[\#e7e8ef\] img {
     width: 3rem !important;
     height: 3rem !important;
   }
