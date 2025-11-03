@@ -414,3 +414,97 @@ button:focus {
     padding: 0.75rem 0 !important; /* تقليل المسافة العلوية والسفلية للهيدر */
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 2rem !important;
+    padding-top: 3rem !important;
+  }
+
+  footer .w-full.md\:w-\[18\%\] {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  footer img {
+    height: 5rem !important;
+  }
+
+  footer .w-full.md\:w-\[60\%\] {
+    width: 100% !important;
+    align-items: center !important;
+  }
+
+  footer .flex.flex-wrap {
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+
+  footer .flex.flex-row-reverse {
+    justify-content: center !important;
+    gap: 1.5rem !important;
+  }
+
+  footer .text-gray-400 {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* التحكم في الشبكة العامة */
+  section.bg-\[\#e7e8ef\] .max-w-7xl {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 3rem !important;
+  }
+
+  /* العناوين والنصوص */
+  section.bg-\[\#e7e8ef\] h2 {
+    font-size: 2.2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  section.bg-\[\#e7e8ef\] p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+
+  /* الزر */
+  section.bg-\[\#e7e8ef\] button {
+    margin: 2rem   0 auto !important;
+    width: fit-content   !important;
+    font-size: 1rem !important;
+    justify-content: center !important;
+  }
+
+  /* قسم الكروت */
+  section.bg-\[\#e7e8ef\] .grid.grid-cols-1.sm\:grid-cols-2 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+    justify-items: center !important;
+  }
+
+  /* البطاقات نفسها */
+  section.bg-\[\#e7e8ef\] .space-y-3 {
+    padding: 1rem !important;
+     border-radius: 10px !important;
+   }
+
+  /* صورة المستخدم */
+  section.bg-\[\#e7e8ef\] img {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  /* الاسم والمنصب */
+  section.bg-\[\#e7e8ef\] h3 {
+    font-size: 1rem !important;
+  }
+
+  section.bg-\[\#e7e8ef\] .text-sm {
+    font-size: 0.9rem !important;
+  }
+}
