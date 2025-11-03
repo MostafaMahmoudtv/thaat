@@ -74,132 +74,128 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-const slides = [
-  {
-    image: "assets/ipad.png",
-    title: "وظف أفضل الكفاءات السعودية بسهولة",
-    paragraph1:
-      "انضم إلى 'ذات' وابدأ بتوظيف نخبة المواهب المحلية بمرونة وسهولة.",
-    paragraph2:
-      "أنشئ حساب شركتك مجانًا، وانشر شواغرك خلال دقائق، وابدأ استقبال طلبات المرشحين فورًا.",
-    buttonText: "سجل شركتك الآن مجانًا",
-    buttonLink: "Register.html#companyTabRegister",
-    buttonColor: "#3f4595", // لون زر السلايد الأول
-  },
-  {
-    image: "assets/ipad2.png",
-    title: "أوجد وظيفتك المثالية بسهولة",
-    paragraph1:
-      "انضم إلى 'ذات' وانطلق نحو مستقبلك المهني مع أفضل الشركات في السعودية بمرونة وسهولة.",
-    paragraph2:
-      "أنشئ ملفك الشخصي مجانًا، تصفح أحدث الشواغر خلال دقائق، وتقدم على الوظيفة المناسبة لك فورًا.",
-    buttonText: "سجل واستقبل الوظائف",
-    buttonLink: "Register.html#jobSeekerTab",
-    buttonColor: "#5090C7", // لون زر السلايد الثاني
-  },
-];
+  const slides = [
+    {
+      image: "assets/ipad.png",
+      title: "وظف أفضل الكفاءات السعودية بسهولة",
+      paragraph1:
+        "انضم إلى 'ذات' وابدأ بتوظيف نخبة المواهب المحلية بمرونة وسهولة.",
+      paragraph2:
+        "أنشئ حساب شركتك مجانًا، وانشر شواغرك خلال دقائق، وابدأ استقبال طلبات المرشحين فورًا.",
+      buttonText: "سجل شركتك الآن مجانًا",
+      buttonLink: "Register.html#companyTabRegister",
+      buttonColor: "#3f4595", // لون زر السلايد الأول
+    },
+    {
+      image: "assets/ipad2.png",
+      title: "أوجد وظيفتك المثالية بسهولة",
+      paragraph1:
+        "انضم إلى 'ذات' وانطلق نحو مستقبلك المهني مع أفضل الشركات في السعودية بمرونة وسهولة.",
+      paragraph2:
+        "أنشئ ملفك الشخصي مجانًا، تصفح أحدث الشواغر خلال دقائق، وتقدم على الوظيفة المناسبة لك فورًا.",
+      buttonText: "سجل واستقبل الوظائف",
+      buttonLink: "Register.html#jobSeekerTab",
+      buttonColor: "#5090C7", // لون زر السلايد الثاني
+    },
+  ];
 
-const slider = document.getElementById("slider");
-const title = document.querySelector(".hero-section h1");
-const p1 = document.querySelectorAll(".hero-section p")[0];
-const p2 = document.querySelectorAll(".hero-section p")[1];
-const button = document.querySelector(".hero-section a button");
+  const slider = document.getElementById("slider");
+  const title = document.querySelector(".hero-section h1");
+  const p1 = document.querySelectorAll(".hero-section p")[0];
+  const p2 = document.querySelectorAll(".hero-section p")[1];
+  const button = document.querySelector(".hero-section a button");
 
-const dot1 = document.getElementById("dot1");
-const dot2 = document.getElementById("dot2");
+  const dot1 = document.getElementById("dot1");
+  const dot2 = document.getElementById("dot2");
 
-if (slider && dot1 && dot2) {
-  let current = 0;
+  if (slider && dot1 && dot2) {
+    let current = 0;
 
-  function lightenColor(color, percent) {
-    let num = parseInt(color.replace("#", ""), 16),
-      amt = Math.round(2.55 * percent),
-      R = (num >> 16) + amt,
-      G = ((num >> 8) & 0x00ff) + amt,
-      B = (num & 0x0000ff) + amt;
-    return (
-      "#" +
-      (
-        0x1000000 +
-        (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
-        (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
-        (B < 255 ? (B < 1 ? 0 : B) : 255)
-      )
-        .toString(16)
-        .slice(1)
-    );
-  }
-
-  function updateSlider() {
-    const slide = slides[current];
-
-    // إعادة تشغيل أنيميشن الصورة
-    slider.classList.remove("fade");
-    void slider.offsetWidth;
-    slider.classList.add("fade");
-
-    // إعادة تشغيل أنيميشن النصوص والزر
-    [title, p1, p2, button].forEach((el) => {
-      el.classList.remove("fade2");
-      void el.offsetWidth;
-      el.classList.add("fade2");
-    });
-
-    // تغيير الصورة والنصوص
-    slider.src = slide.image;
-    title.innerHTML = slide.title;
-    p1.textContent = slide.paragraph1;
-    p2.textContent = slide.paragraph2;
-
-    // الزر
-    button.textContent = slide.buttonText;
-    button.parentElement.href = slide.buttonLink;
-    button.style.backgroundColor = slide.buttonColor;
-    button.style.transition = "background-color 0.3s ease";
-
-    // إعداد الهوفر
-    const hoverColor = lightenColor(slide.buttonColor, 15);
-    button.addEventListener("mouseenter", () => {
-      button.style.backgroundColor = hoverColor;
-    });
-    button.addEventListener("mouseleave", () => {
-      button.style.backgroundColor = slide.buttonColor;
-    });
-
-    // التحكم في النقاط
-    if (current === 0) {
-      dot1.classList.add("bg-white");
-      dot1.classList.remove("bg-white/40");
-      dot2.classList.add("bg-white/40");
-      dot2.classList.remove("bg-white");
-    } else {
-      dot2.classList.add("bg-white");
-      dot2.classList.remove("bg-white/40");
-      dot1.classList.add("bg-white/40");
-      dot1.classList.remove("bg-white");
+    function lightenColor(color, percent) {
+      let num = parseInt(color.replace("#", ""), 16),
+        amt = Math.round(2.55 * percent),
+        R = (num >> 16) + amt,
+        G = ((num >> 8) & 0x00ff) + amt,
+        B = (num & 0x0000ff) + amt;
+      return (
+        "#" +
+        (
+          0x1000000 +
+          (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
+          (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
+          (B < 255 ? (B < 1 ? 0 : B) : 255)
+        )
+          .toString(16)
+          .slice(1)
+      );
     }
+
+    function updateSlider() {
+      const slide = slides[current];
+
+      // إعادة تشغيل أنيميشن الصورة
+      slider.classList.remove("fade");
+      void slider.offsetWidth;
+      slider.classList.add("fade");
+
+      // إعادة تشغيل أنيميشن النصوص والزر
+      [title, p1, p2, button].forEach((el) => {
+        el.classList.remove("fade2");
+        void el.offsetWidth;
+        el.classList.add("fade2");
+      });
+
+      slider.src = slide.image;
+      title.innerHTML = slide.title;
+      p1.textContent = slide.paragraph1;
+      p2.textContent = slide.paragraph2;
+
+      button.textContent = slide.buttonText;
+      button.parentElement.href = slide.buttonLink;
+      button.style.backgroundColor = slide.buttonColor;
+      button.style.transition = "background-color 0.3s ease";
+
+      const hoverColor = lightenColor(slide.buttonColor, 15);
+      button.addEventListener("mouseenter", () => {
+        button.style.backgroundColor = hoverColor;
+      });
+      button.addEventListener("mouseleave", () => {
+        button.style.backgroundColor = slide.buttonColor;
+      });
+
+      // التحكم في النقاط
+      if (current === 0) {
+        dot1.classList.add("bg-white");
+        dot1.classList.remove("bg-white/40");
+        dot2.classList.add("bg-white/40");
+        dot2.classList.remove("bg-white");
+      } else {
+        dot2.classList.add("bg-white");
+        dot2.classList.remove("bg-white/40");
+        dot1.classList.add("bg-white/40");
+        dot1.classList.remove("bg-white");
+      }
+    }
+
+    // تقليب تلقائي
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      updateSlider();
+    }, 5000);
+
+    // التحكم بالنقر على النقاط
+    dot1.addEventListener("click", () => {
+      current = 0;
+      updateSlider();
+    });
+    dot2.addEventListener("click", () => {
+      current = 1;
+      updateSlider();
+    });
+
+    // البداية
+    updateSlider();
   }
-
-  // تقليب تلقائي
-  setInterval(() => {
-    current = (current + 1) % slides.length;
-    updateSlider();
-  }, 5000);
-
-  // التحكم بالنقر على النقاط
-  dot1.addEventListener("click", () => {
-    current = 0;
-    updateSlider();
-  });
-  dot2.addEventListener("click", () => {
-    current = 1;
-    updateSlider();
-  });
-
-  // البداية
-  updateSlider();
-}
-
 
   document.querySelectorAll('a[href="#companyTab"]').forEach((link) => {
     link.addEventListener("click", (e) => {
