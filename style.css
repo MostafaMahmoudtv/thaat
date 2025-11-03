@@ -389,6 +389,7 @@ button:focus {
     width: 80px !important;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   header .logo {
     height: 3.5rem !important; /* تصغير الشعار */
