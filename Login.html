@@ -22,15 +22,13 @@
       class="absolute top-0 left-0 border-b border-white/10 w-full bg-white z-20 py-4"
     >
       <div class="container mx-auto flex justify-between items-center px-6">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
+         <div class="flex items-center space-x-2">
           <a href="index.html">
             <img src="assets/logo.svg" alt="شعار ذات" class="h-16" />
           </a>
         </div>
 
-        <!-- 🌐 Desktop Navigation -->
-        <div
+         <div
           class="hidden md:flex items-center space-x-6 space-x-reverse text-gray-800"
         >
           <nav
@@ -59,8 +57,7 @@
           </div>
         </div>
 
-        <!-- 📱 Mobile Menu Button -->
-        <button
+         <button
           id="menuBtn"
           class="md:hidden text-[#3f4595] text-3xl focus:outline-none"
         >
@@ -68,8 +65,7 @@
         </button>
       </div>
 
-      <!-- 📱 Mobile Menu Drawer -->
-      <div
+       <div
         id="mobileMenu"
         class="hidden md:hidden bg-[#1b1d2f]/95 backdrop-blur-md absolute top-full left-0 w-full text-white flex flex-col items-center space-y-4 py-12 transition-all duration-300"
       >
@@ -94,8 +90,7 @@
         </a>
       </div>
     </header>
-    <!-- بطاقة تسجيل الدخول -->
-
+ 
     <div
       class="w-[100%] flex justify-center py-32 pt-40"
       style="
@@ -107,18 +102,17 @@
       <div
         class="bg-transparent rounded-lg shadow-lg w-full max-w-xl overflow-hidden"
       >
-        <!-- التبويبات -->
-        <div class="flex bg-transparent rounded-t-lg w-[90%] mx-auto">
+         <div class="flex bg-transparent rounded-t-lg w-[90%] mx-auto">
           <button
             id="jobSeekerTab"
-            class="w-1/2 py-3 !bg-white ml-6 inline-flex items-center justify-center text-center rounded-t-lg text-blue-600 transition duration-200"
+            class="w-1/2 py-3 !bg-white ml-6 inline-flex items-center justify-center text-center rounded-t-lg text-[#5090C7] transition duration-200"
           >
             <img src="assets/bag.svg" alt="bag " class="w-10 px-2" />
             حساب الباحثين عن عمل
           </button>
           <button
             id="companyTab"
-            class="w-1/2 py-3 text-center items-center rounded-t-lg inline-flex justify-center !text-gray-600 !bg-gray-400 hover:text-blue-600 border-transparent transition duration-200 outline-none focus:outline-none"
+            class="w-1/2 py-3 text-center items-center rounded-t-lg inline-flex justify-center !text-gray-600 !bg-gray-400 hover:text-[#5090C7] border-transparent transition duration-200 outline-none focus:outline-none"
           >
             <img src="assets/building.svg" alt="buliding" class="w-10 px-2" />
 
@@ -126,15 +120,14 @@
           </button>
         </div>
 
-        <!-- المحتوى -->
-        <div id="formContainer" class="p-6 rounded-lg shadow-lg bg-white">
-          <h2 class="text-center text-blue-600 text-xl mb-6" id="formTitle">
+         <div id="formContainer" class="p-6 rounded-lg shadow-lg bg-white">
+          <h2 class="text-center text-[#5090C7] text-xl mb-6" id="formTitle">
             تسجيل الدخول
           </h2>
 
           <form class="space-y-4 w-[60%] mx-auto pb-4">
             <div>
-              <label class="block text-blue-600 mb-1">البريد الإلكتروني</label>
+              <label class="block text-[#5090C7] mb-1">البريد الإلكتروني</label>
               <input
                 type="email"
                 placeholder="YourEmail@domain.sa"
@@ -144,7 +137,7 @@
             </div>
 
             <div>
-              <label class="block text-blue-600 mb-1">الرقم السري</label>
+              <label class="block text-[#5090C7] mb-1">الرقم السري</label>
               <input
                 type="password"
                 placeholder="************"
@@ -154,7 +147,7 @@
             </div>
 
             <div class="text-left">
-              <a href="#" class="text-sm text-blue-600 hover:text-blue-600"
+              <a href="#" class="text-sm text-[#5090C7] hover:text-[#5090C7]"
                 >هل نسيت كلمة السر؟
               </a>
             </div>
@@ -162,7 +155,7 @@
             <button
               id="loginBtn"
               type="submit"
-              class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 text-base rounded transition duration-200"
+              class="w-full bg-[#5090C7] hover:bg-[#66A2D3] text-white py-2 text-base rounded transition duration-200"
             >
               دخول
             </button>
@@ -170,7 +163,7 @@
             <a href="Register.html">
               <button
                 type="button"
-                class="w-full border mt-4 border-blue-400 text-blue-600 text-base py-2 rounded hover:bg-blue-50 transition duration-200"
+                class="w-full border mt-4 border-blue-400 text-[#5090C7] text-base py-2 rounded hover:bg-blue-50 transition duration-200"
               >
                 تسجيل جديد
               </button>
@@ -179,23 +172,20 @@
         </div>
       </div>
     </div>
-    <footer
-      class="flex flex-col md:flex-row justify-start items-center md:items-start container mx-auto py-8 border-t border-gray-100 text-center gap-10 px-6"
+   <footer
+      class="flex flex-col md:flex-row justify-start items-center md:items-start container mx-auto py-8 pt-20 border-t border-gray-100 text-center gap-10 px-6"
     >
-      <!-- الصورة -->
-      <div class="w-full md:w-[30%] flex justify-center md:justify-start">
+      <div class="w-full md:w-[18%] flex justify-center md:justify-start">
         <img
           src="assets/logo.svg"
           alt="thaat"
-          class="h-20 md:h-24 object-contain"
+          class="h-20 md:h-28 object-contain"
         />
       </div>
 
-      <!-- المحتوى -->
       <div class="w-full md:w-[60%] flex flex-col items-center space-y-6">
-        <!-- الروابط -->
         <div
-          class="flex flex-wrap justify-center md:justify-between w-full text-[#555aa1] font-medium gap-4 sm:gap-6 text-base sm:text-lg"
+          class="flex flex-wrap justify-center md:justify-between w-full text-[#555aa1] gap-4 sm:gap-6 text-base sm:text-2xl"
         >
           <a href="#" class="hover:text-indigo-700">الوظائف</a>
           <a href="#" class="hover:text-indigo-700">عن ذات</a>
@@ -205,26 +195,21 @@
           <a href="#" class="hover:text-indigo-700">تواصل معنا</a>
         </div>
 
-        <!-- السوشيال -->
         <div
-          class="flex flex-row-reverse justify-center md:justify-end gap-5 text-xl sm:text-2xl text-[#3c3f87]"
+          class="pt-6 flex flex-row-reverse justify-center md:justify-end gap-4 md:gap-8 text-xl sm:text-2xl text-[#3c3f87]"
         >
-          <a href="#"><i class="fab fa-snapchat"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-snapchat fa-lg"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="#"><i class="fab fa-whatsapp fa-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
         </div>
 
-        <!-- الحقوق -->
-        <div class="text-gray-500 text-sm leading-relaxed">
+        <div class="text-gray-400 pt-2 font-bold text-lg leading-relaxed">
           جميع الحقوق محفوظة لـ ذات © 2025 <br />
-          <a
-            href="https://www.thaat.net"
-            class="text-[#3c3f87] hover:underline"
-          >
+          <a href="https://www.thaat.net" class="text-gray-400 hover:underline">
             www.thaat.net
           </a>
         </div>

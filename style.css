@@ -1,9 +1,7 @@
 :root {
-  /* Colors: */
   --unnamed-color-5090c7: #5090c7;
   --unnamed-color-1fbbb3: #1fbbb3;
 
-  /* Font/text values */
   --unnamed-font-family-neo-sans-w23: "Neo Sans Arabic", sans-serif !important;
   --unnamed-font-style-normal: normal;
   --unnamed-font-weight-medium: medium;
@@ -12,7 +10,6 @@
   --unnamed-line-spacing-37: 37px;
 }
 
-/* Character Styles */
 .unnamed-character-style-1 {
   font-family: var(--unnamed-font-family-neo-sans-w23) !important;
   font-style: var(--unnamed-font-style-normal);
@@ -52,28 +49,68 @@ img {
 }
 
 @media screen and (min-width: 1620px) {
+  header nav a {
+    font-weight: lighter;
+    font-size: 1.2rem;
+  }
+  header .logo {
+    padding: 1rem;
+    height: 100%;
+  }
+  header button {
+    font-size: 1.1rem;
+    width: 100% !important;
+    padding: 0.8rem;
+    padding-right: 3rem !important;
+    font-weight: lighter;
+    padding-left: 3rem !important;
+  }
   .hero-section {
     height: 800px !important;
+    align-items: end;
+  }
+  .sliderimage {
+    bottom: -21%;
+  }
+  .hero-section h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+  }
+  .hero-section p {
+    font-size: 1.6rem;
+    width: 135%;
+    padding-bottom: 1rem;
+  }
+  .hero-section button {
+    font-size: 2rem;
+    width: 74%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .hero-section .dots {
+    margin-right: 4rem;
+    margin-bottom: 2rem !important;
+  }
+  .hero-section .dots > div {
+    width: 35%;
+    height: 0.4rem;
   }
 }
 button:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-/* للموبايل والتابلت فقط */
 @media (max-width: 1024px) {
   section.bg-\[\#f7f9fc\] {
     padding-bottom: 4rem;
     padding-top: 2rem;
   }
 
-  /* خليه عمود واحد بدل صف */
   section.bg-\[\#f7f9fc\] > div {
     flex-direction: column !important;
     align-items: center !important;
   }
 
-  /* عدل حجم الدائرة */
   section.bg-\[\#f7f9fc\] .w-96,
   section.bg-\[\#f7f9fc\] .md\:w-\[23rem\] {
     width: 15rem !important;
@@ -81,36 +118,31 @@ button:focus {
     margin: 2rem 0 !important;
   }
 
-  /* خليه العناصر تاخد عرض كامل */
   section.bg-\[\#f7f9fc\] .w-2\/3 {
     width: 100% !important;
     margin: 0 !important;
   }
 
-  /* خفف المارجن */
   section.bg-\[\#f7f9fc\] .mr-40,
   section.bg-\[\#f7f9fc\] .ml-40 {
     margin: 0 !important;
   }
 
-  /* وسّط النصوص */
   section.bg-\[\#f7f9fc\] p {
     width: 100% !important;
     margin: 0 auto !important;
     text-align: right !important;
     margin-top: 3px !important;
     padding-right: 1rem;
-    padding-left: 1rem ;
+    padding-left: 1rem;
   }
 
-  /* الأزرار */
   section.bg-\[\#f7f9fc\] button {
     margin: 2rem auto 0 !important;
     display: flex !important;
     justify-content: center !important;
   }
 
-  /* شيل الـposition من الدائرة */
   section.bg-\[\#f7f9fc\] > div > .absolute {
     position: relative !important;
     right: auto !important;
@@ -139,13 +171,10 @@ button:focus {
   }
 }
 
-/* توقف عند الـ hover */
 .logo-slider:hover .slide-track {
   animation-play-state: paused;
 }
-/* التابلت: شاشات بعرض أقل من 1024px */
 
-/* تباعد داخلي للفورم على شاشات أصغر */
 @media (max-width: 1024px) {
   #formContainer form {
     width: 75% !important;
@@ -154,13 +183,11 @@ button:focus {
   }
 }
 
-/* تابلت / موبايل كبير */
 @media (max-width: 768px) {
   #formContainer form {
     width: 90% !important;
   }
 
-  /* اجعل النصوص والأزرار أكبر قليلاً للقراءة بالهاتف */
   #formContainer form input,
   #formContainer form button,
   #formContainer form a > button {
@@ -168,13 +195,11 @@ button:focus {
     padding: 12px 10px;
   }
 
-  /* زر "هل نسيت كلمة السر؟" نصه يكون في اليمين (لـ RTL) */
   #formContainer .text-left {
-    text-align: right; /* لأن الفورم RTL */
+    text-align: right;
   }
 }
 
-/* شاشات صغيرة جدًا (مثل الهواتف القديمة) */
 @media (max-width: 420px) {
   #formContainer form {
     width: 96% !important;
@@ -182,22 +207,17 @@ button:focus {
     padding-right: 6px;
   }
 
-  /* امنع أي ازاحة عرضية */
-
-  /* خفّض هوامش العنوان لو لازمة */
   #formContainer h2 {
     font-size: 1.05rem;
     margin-bottom: 0.6rem;
   }
 
-  /* اجعل الأزرار أعلى لتسهيل الضغط بالإبهام */
   #loginBtn {
     padding-top: 14px;
     padding-bottom: 14px;
     font-size: 16px;
   }
 }
-/* 🌐 القاعدة العامة للفورم */
 #jobForm,
 #companyForm {
   width: 60% !important;
@@ -206,7 +226,6 @@ button:focus {
   box-sizing: border-box;
 }
 
-/* ✅ على الشاشات المتوسطة (تابلت وأجهزة متوسطة العرض) */
 @media (max-width: 1024px) {
   #jobForm,
   #companyForm {
@@ -214,14 +233,12 @@ button:focus {
   }
 }
 
-/* ✅ على الشاشات الصغيرة (الموبايل) */
 @media (max-width: 768px) {
   #jobForm,
   #companyForm {
     width: 90% !important;
   }
 
-  /* تكبير حجم الخطوط والحقول لتناسب الموبايل */
   #jobForm input,
   #companyForm input,
   #jobForm button,
@@ -230,20 +247,17 @@ button:focus {
     padding: 12px 10px;
   }
 
-  /* المسافات بين العناصر */
   #jobForm .space-y-4 > * + *,
   #companyForm .space-y-4 > * + * {
     margin-top: 1rem;
   }
 
-  /* النصوص الصغيرة تكون في المنتصف للموبايل */
   #formContainerRegister a {
     display: block;
     text-align: center;
   }
 }
 
-/* ✅ على الشاشات الصغيرة جدًا (هواتف أقل من 420px) */
 @media (max-width: 420px) {
   #jobForm,
   #companyForm {
@@ -251,51 +265,151 @@ button:focus {
     padding: 0 8px;
   }
 
-  /* تحسين حجم العناوين */
   #registerTitle {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
 
-  /* تقليل المسافات لتناسب الشاشة */
   #formContainerRegister {
     padding: 16px 10px;
   }
 
-  /* جعل الأزرار أكبر قليلاً لسهولة اللمس */
   #jobForm button,
   #companyForm button {
     padding: 14px 10px;
     font-size: 15px;
   }
 }
- @keyframes fadeSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-slide-up {
+@keyframes fadeSlideUp {
+  0% {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.5s, transform 0.5s;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.show {
+  animation: fadeSlideUp 1.2s ease forwards;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.1s;
+}
+.fade-delay-2 {
+  animation-delay: 0.2s;
+}
+.fade-delay-3 {
+  animation-delay: 0.3s;
+}
+/* أنيميشن عامة */
+/* الصورة */
+.fade {
+  animation: slideInLeft 0.8s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* النصوص والزر */
+.fade2 {
+  animation: slideInRight 0.8s ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0.4;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* الصورة */
+  .hero-section .sliderimage {
+    left: 2rem !important;
+    bottom: -4rem !important;
+    width: 50%;
   }
 
-  .show {
-    animation: fadeSlideUp 1.2s ease forwards;
+  .hero-section #slider {
+    width: 85% !important;
+    max-width: 480px !important;
   }
 
-  .fade-delay-1 {
-    animation-delay: 0.1s;
+  /* العناوين */
+  .hero-section h1 {
+    font-size: 2.6rem !important;
+    line-height: 1.4 !important;
   }
-  .fade-delay-2 {
-    animation-delay: 0.2s;
+
+  /* الفقرات */
+  .hero-section p {
+    font-size: 1.1rem !important;
   }
-  .fade-delay-3 {
-    animation-delay: 0.3s;
+
+  /* الزر */
+  .hero-section button {
+    width: 65% !important;
+    font-size: 1.2rem !important;
+    padding: 0.9rem 1.5rem !important;
   }
+
+  /* المسافات */
+  .hero-section .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* النقاط */
+  .hero-section .dots {
+    gap: 0.5rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .hero-section .dots div {
+    width: 80px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .logo {
+    height: 3.5rem !important; /* تصغير الشعار */
+  }
+
+  header nav a {
+    font-size: 0.95rem !important; /* تصغير حجم النص داخل اللينكات */
+    margin: 0 0.5rem !important;
+  }
+
+  header nav {
+    gap: 1.5rem !important; /* تقليل المسافة بين اللينكات */
+  }
+
+  header .logs button {
+    width: fit-content !important; /* تقليل عرض الأزرار */
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  header {
+    padding: 0.75rem 0 !important; /* تقليل المسافة العلوية والسفلية للهيدر */
+  }
+}

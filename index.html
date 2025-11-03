@@ -22,15 +22,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
     <header
       class="absolute top-0 left-0 border-b border-white/10 w-full bg-transparent z-20 py-4"
     >
       <div class="container mx-auto flex justify-between items-center px-6">
-        <!-- Logo -->
         <div class="flex items-center space-x-2">
           <a href="index.html">
-            <img src="assets/logo1.svg" alt="شعار ذات" class="h-16" />
+            <img src="assets/logo1.svg" alt="شعار ذات" class="h-16 logo" />
           </a>
         </div>
 
@@ -38,14 +36,14 @@
           class="hidden md:flex items-center space-x-6 space-x-reverse text-white"
         >
           <nav
-            class="text-lg font-normal flex items-center space-x-6 space-x-reverse"
+            class="text-lg font-normal flex items-center space-x-16 ml-10 space-x-reverse"
           >
             <a href="#" class="hover:text-blue-100">الرئيسية</a>
             <a href="#" class="hover:text-blue-100">الوظائف</a>
             <a href="#" class="hover:text-blue-100">تواصل معنا</a>
           </nav>
 
-          <div class="flex items-center space-x-2 space-x-reverse">
+          <div class="flex items-center space-x-2 space-x-reverse logs">
             <a href="Login.html">
               <button
                 class="bg-[#5090C7] hover:bg-[#63a4d4] w-32 text-white px-4 py-3 rounded-md transition"
@@ -63,7 +61,6 @@
           </div>
         </div>
 
-        <!-- 📱 Mobile Menu Button -->
         <button
           id="menuBtn"
           class="md:hidden text-white text-3xl focus:outline-none"
@@ -72,7 +69,6 @@
         </button>
       </div>
 
-      <!-- 📱 Mobile Menu Drawer -->
       <div
         id="mobileMenu"
         class="hidden md:hidden bg-[#1b1d2f]/95 backdrop-blur-md absolute top-full left-0 w-full text-white flex flex-col items-center space-y-4 py-12 transition-all duration-300"
@@ -100,7 +96,7 @@
     </header>
 
     <section
-      class="relative h-auto md:h-[620px] flex flex-col md:flex-row items-center justify-between bg-center bg-cover text-white hero-section"
+      class="relative h-auto md:h-[620px] flex flex-col md:flex-row items-end justify-between bg-center bg-cover text-white hero-section"
       style="
         background-image: url('assets/firstSection.png');
         background-size: cover;
@@ -110,9 +106,8 @@
       <div
         class="relative container mx-auto flex flex-col md:flex-row items-center px-6 pt-24 md:pt-0 text-center md:text-right"
       >
-        <!-- الصورة -->
         <div
-          class="relative order-1 md:order-2 mt-6 w-full md:w-1/2 flex justify-center md:justify-end z-10 md:absolute md:left-0 md:-bottom-32"
+          class="relative order-1 md:order-2 mt-6 w-full md:w-1/2 flex justify-center md:justify-end z-10 md:absolute md:left-0 md:-bottom-32 sliderimage"
         >
           <img
             id="slider"
@@ -122,7 +117,6 @@
           />
         </div>
 
-        <!-- النص -->
         <div
           class="order-2 md:order-1 md:max-w-xl mt-10 md:mt-20 mb-10 md:mb-0 z-10 flex-1"
         >
@@ -153,9 +147,8 @@
             </button>
           </a>
 
-          <!-- مؤشرات السلايدر (موحدة لكل الشاشات) -->
           <div
-            class="flex justify-center md:justify-start items-center gap-3 pt-4 pb-6"
+            class="flex justify-center md:justify-start items-center gap-3 pt-4 pb-6 mr-0 md:mr-16 dots"
           >
             <div
               id="dot1"
@@ -173,11 +166,9 @@
     <section
       class="bg-[#f7f9fc] pb-32 pt-8 relative flex items-center justify-center fade-slide-up fade-delay-1"
     >
-      <!-- العمودين -->
       <div
         class="flex justify-between items-end w-full max-w-6xl px-8 relative"
       >
-        <!-- الباحثين عن عمل -->
         <div class="space-y-4 w-2/3 text-center">
           <div
             class="flex flex-col items-center mr-40 mb-10 fade-slide-up fade-delay-1"
@@ -239,7 +230,6 @@
           </button>
         </div>
 
-        <!-- الدائرة في المنتصف -->
         <div
           class="absolute right-[17%] bottom-28 -translate-x-1/2 z-10 flex justify-center items-center"
         >
@@ -250,7 +240,6 @@
           </div>
         </div>
 
-        <!-- لأصحاب الشركات -->
         <div class="space-y-4 w-2/3 text-center">
           <div class="flex flex-col items-center ml-40 mb-10">
             <img
@@ -326,7 +315,6 @@
       <div
         class="relative z-10 container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 items-center px-6 text-white text-center md:text-right"
       >
-        <!-- الصورة -->
         <div
           class="order-1 md:order-2 flex justify-center md:justify-start mb-8 md:mb-0"
         >
@@ -337,7 +325,6 @@
           />
         </div>
 
-        <!-- النص -->
         <div
           class="order-2 text-center md:text-right md:order-1 md:mr-16 lg:mr-24 md:!max-w-[80%] lg:!max-w-[70%] space-y-3 fade-slide-up fade-delay-3"
         >
@@ -369,7 +356,6 @@
       <div
         class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[0.5fr_1fr] gap-8 items-center px-6"
       >
-        <!-- العمود الأيمن -->
         <div class="text-center md:text-right space-y-2 md:space-y-1">
           <h2
             class="text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-10 text-[#2c2d81]"
@@ -405,11 +391,9 @@
           </button>
         </div>
 
-        <!-- الشبكة اليسرى -->
         <div
           class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-right text-base md:text-[1rem]"
         >
-          <!-- شهادة -->
           <div class="bg-transparent space-y-3">
             <p class="text-gray-700 leading-relaxed">
               منصة استثنائية سهلت علينا توظيف كفاءات مميزة بسرعة قياسية وبشكل
@@ -431,7 +415,6 @@
             </div>
           </div>
 
-          <!-- تكرارات -->
           <div class="bg-transparent space-y-3">
             <p class="text-gray-700 leading-relaxed">
               منصة استثنائية سهلت علينا توظيف كفاءات مميزة بسرعة قياسية وبشكل
@@ -502,7 +485,6 @@
       <div class="container mx-auto">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper flex items-center">
-            <!-- الشعارات -->
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Image 54.png"
@@ -546,7 +528,6 @@
               />
             </div>
 
-            <!-- كررهم علشان يفضل الشريط لانهائي بدون فراغ -->
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Image 54.png"
@@ -587,19 +568,16 @@
       <div
         class="relative max-w-3xl mx-auto flex flex-col sm:flex-row flex-wrap justify-center md:justify-between items-center gap-12 sm:gap-16 px-6"
       >
-        <!-- العنصر الأول -->
         <div class="w-full sm:w-auto">
           <h3 class="text-4xl md:text-4xl text-[#4577b4]">15,640</h3>
           <p class="text-white text-lg md:text-xl mt-2">باحث عن عمل</p>
         </div>
 
-        <!-- العنصر الثاني -->
         <div class="w-full sm:w-auto">
           <h3 class="text-4xl md:text-4xl text-[#4577b4]">564</h3>
           <p class="text-white text-lg md:text-xl mt-2">جهة توظيف</p>
         </div>
 
-        <!-- العنصر الثالث -->
         <div class="w-full sm:w-auto">
           <h3 class="text-4xl md:text-4xl text-[#4577b4]">1,260</h3>
           <p class="text-white text-lg md:text-xl mt-2">تم توظيفهم</p>
@@ -608,22 +586,19 @@
     </section>
 
     <footer
-      class="flex flex-col md:flex-row justify-start items-center md:items-start container mx-auto py-8 border-t border-gray-100 text-center gap-10 px-6"
+      class="flex flex-col md:flex-row justify-start items-center md:items-start container mx-auto py-8 pt-20 border-t border-gray-100 text-center gap-10 px-6"
     >
-      <!-- الصورة -->
-      <div class="w-full md:w-[30%] flex justify-center md:justify-start">
+      <div class="w-full md:w-[18%] flex justify-center md:justify-start">
         <img
           src="assets/logo.svg"
           alt="thaat"
-          class="h-20 md:h-24 object-contain"
+          class="h-20 md:h-28 object-contain"
         />
       </div>
 
-      <!-- المحتوى -->
-      <div class="w-full md:w-[60%] flex flex-col items-center space-y-6">
-        <!-- الروابط -->
+      <div class="w-full md:w-[60%] flex flex-col items-center space-y-6 footer-links">
         <div
-          class="flex flex-wrap justify-center md:justify-between w-full text-[#555aa1] font-medium gap-4 sm:gap-6 text-base sm:text-lg"
+          class="flex flex-wrap justify-center md:justify-between w-full text-[#555aa1] gap-4 sm:gap-6 text-base sm:text-2xl "
         >
           <a href="#" class="hover:text-indigo-700">الوظائف</a>
           <a href="#" class="hover:text-indigo-700">عن ذات</a>
@@ -633,26 +608,21 @@
           <a href="#" class="hover:text-indigo-700">تواصل معنا</a>
         </div>
 
-        <!-- السوشيال -->
         <div
-          class="flex flex-row-reverse justify-center md:justify-end gap-5 text-xl sm:text-2xl text-[#3c3f87]"
+          class="pt-6 flex flex-row-reverse justify-center md:justify-end gap-4 md:gap-8 text-xl sm:text-2xl text-[#3c3f87]"
         >
-          <a href="#"><i class="fab fa-snapchat"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-snapchat fa-lg"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="#"><i class="fab fa-whatsapp fa-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
         </div>
 
-        <!-- الحقوق -->
-        <div class="text-gray-500 text-sm leading-relaxed">
+        <div class="text-gray-400 pt-2 font-bold text-lg leading-relaxed">
           جميع الحقوق محفوظة لـ ذات © 2025 <br />
-          <a
-            href="https://www.thaat.net"
-            class="text-[#3c3f87] hover:underline"
-          >
+          <a href="https://www.thaat.net" class="text-gray-400 hover:underline">
             www.thaat.net
           </a>
         </div>
